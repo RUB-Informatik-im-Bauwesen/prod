@@ -1,0 +1,933 @@
+# baseURI: http://inf.bi.rub.de/dt/prodsys
+# imports: https://rub-informatik-im-bauwesen.github.io/prod
+# prefix: prodsys
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prod: <https://rub-informatik-im-bauwesen.github.io/prod#> .
+@prefix prodsys: <http://inf.bi.rub.de/dt/prodsys#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://inf.bi.rub.de/dt/prodsys>
+  rdf:type owl:Ontology ;
+  owl:imports <https://rub-informatik-im-bauwesen.github.io/prod> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+prodsys:Buffer_1
+  rdf:type prod:Buffer ;
+  rdfs:label "Buffer_1" ;
+  prod:bufferSize 1 ;
+.
+prodsys:Buffer_2
+  rdf:type prod:Buffer ;
+  rdfs:label "Buffer_2" ;
+  prod:bufferSize 1 ;
+.
+prodsys:ConcretingProcess_1
+  rdf:type prod:ConcretingProcess ;
+  rdfs:label "ConcretingProcess_1" ;
+  prod:canBeExecutedBy prodsys:ConcretingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.4"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ConcretingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_1 ;
+  prod:sequencePosition "3"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ConcretingProcess_10
+  rdf:type prod:ConcretingProcess ;
+  rdfs:label "ConcretingProcess_10" ;
+  prod:canBeExecutedBy prodsys:ConcretingStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ConcretingStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_10 ;
+  prod:sequencePosition "3"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ConcretingProcess_2
+  rdf:type prod:ConcretingProcess ;
+  rdfs:label "ConcretingProcess_2" ;
+  prod:canBeExecutedBy prodsys:ConcretingStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ConcretingStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_2 ;
+  prod:sequencePosition "3"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ConcretingProcess_3
+  rdf:type prod:ConcretingProcess ;
+  rdfs:label "ConcretingProcess_3" ;
+  prod:canBeExecutedBy prodsys:ConcretingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ConcretingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_3 ;
+  prod:sequencePosition "3"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ConcretingProcess_4
+  rdf:type prod:ConcretingProcess ;
+  rdfs:label "ConcretingProcess_4" ;
+  prod:canBeExecutedBy prodsys:ConcretingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ConcretingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_4 ;
+  prod:sequencePosition "3"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ConcretingProcess_5
+  rdf:type prod:ConcretingProcess ;
+  rdfs:label "ConcretingProcess_5" ;
+  prod:canBeExecutedBy prodsys:ConcretingStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.2"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ConcretingStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_5 ;
+  prod:sequencePosition "3"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ConcretingProcess_6
+  rdf:type prod:ConcretingProcess ;
+  rdfs:label "ConcretingProcess_6" ;
+  prod:canBeExecutedBy prodsys:ConcretingStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ConcretingStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_6 ;
+  prod:sequencePosition "3"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ConcretingProcess_7
+  rdf:type prod:ConcretingProcess ;
+  rdfs:label "ConcretingProcess_7" ;
+  prod:canBeExecutedBy prodsys:ConcretingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ConcretingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_7 ;
+  prod:sequencePosition "3"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ConcretingProcess_8
+  rdf:type prod:ConcretingProcess ;
+  rdfs:label "ConcretingProcess_8" ;
+  prod:canBeExecutedBy prodsys:ConcretingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.3"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ConcretingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_8 ;
+  prod:sequencePosition "3"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ConcretingProcess_9
+  rdf:type prod:ConcretingProcess ;
+  rdfs:label "ConcretingProcess_9" ;
+  prod:canBeExecutedBy prodsys:ConcretingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ConcretingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_9 ;
+  prod:sequencePosition "3"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ConcretingStation_1
+  rdf:type prod:ConcretingStation ;
+  rdfs:label "ConcretingStation_1" ;
+.
+prodsys:ConcretingStation_2
+  rdf:type prod:ConcretingStation ;
+  rdfs:label "ConcretingStation_2" ;
+.
+prodsys:CuringProcess_1
+  rdf:type prod:CuringProcess ;
+  rdfs:label "CuringProcess_1" ;
+  prod:canBeExecutedBy prodsys:CuringStation_1 ;
+  prod:canBeExecutedBy prodsys:CuringStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "7.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_1 ;
+  prod:sequencePosition "4"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:CuringProcess_10
+  rdf:type prod:CuringProcess ;
+  rdfs:label "CuringProcess_10" ;
+  prod:canBeExecutedBy prodsys:CuringStation_3 ;
+  prod:canBeExecutedBy prodsys:CuringStation_4 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "7.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_10 ;
+  prod:sequencePosition "4"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:CuringProcess_2
+  rdf:type prod:CuringProcess ;
+  rdfs:label "CuringProcess_2" ;
+  prod:canBeExecutedBy prodsys:CuringStation_3 ;
+  prod:canBeExecutedBy prodsys:CuringStation_4 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "7.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_2 ;
+  prod:sequencePosition "4"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:CuringProcess_3
+  rdf:type prod:CuringProcess ;
+  rdfs:label "CuringProcess_3" ;
+  prod:canBeExecutedBy prodsys:CuringStation_1 ;
+  prod:canBeExecutedBy prodsys:CuringStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "7.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_3 ;
+  prod:sequencePosition "4"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:CuringProcess_4
+  rdf:type prod:CuringProcess ;
+  rdfs:label "CuringProcess_4" ;
+  prod:canBeExecutedBy prodsys:CuringStation_1 ;
+  prod:canBeExecutedBy prodsys:CuringStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "7.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_4 ;
+  prod:sequencePosition "4"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:CuringProcess_5
+  rdf:type prod:CuringProcess ;
+  rdfs:label "CuringProcess_5" ;
+  prod:canBeExecutedBy prodsys:CuringStation_3 ;
+  prod:canBeExecutedBy prodsys:CuringStation_4 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "7.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_5 ;
+  prod:sequencePosition "4"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:CuringProcess_6
+  rdf:type prod:CuringProcess ;
+  rdfs:label "CuringProcess_6" ;
+  prod:canBeExecutedBy prodsys:CuringStation_3 ;
+  prod:canBeExecutedBy prodsys:CuringStation_4 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "7.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_6 ;
+  prod:sequencePosition "4"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:CuringProcess_7
+  rdf:type prod:CuringProcess ;
+  rdfs:label "CuringProcess_7" ;
+  prod:canBeExecutedBy prodsys:CuringStation_1 ;
+  prod:canBeExecutedBy prodsys:CuringStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "7.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_7 ;
+  prod:sequencePosition "4"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:CuringProcess_8
+  rdf:type prod:CuringProcess ;
+  rdfs:label "CuringProcess_8" ;
+  prod:canBeExecutedBy prodsys:CuringStation_1 ;
+  prod:canBeExecutedBy prodsys:CuringStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "7.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_8 ;
+  prod:sequencePosition "4"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:CuringProcess_9
+  rdf:type prod:CuringProcess ;
+  rdfs:label "CuringProcess_9" ;
+  prod:canBeExecutedBy prodsys:CuringStation_1 ;
+  prod:canBeExecutedBy prodsys:CuringStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "7.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_9 ;
+  prod:sequencePosition "4"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:CuringStation_1
+  rdf:type prod:CuringStation ;
+  rdfs:label "CuringStation_1" ;
+  prod:hasBuffer prodsys:Buffer_1 ;
+.
+prodsys:CuringStation_2
+  rdf:type prod:CuringStation ;
+  rdfs:label "CuringStation_2" ;
+  prod:hasBuffer prodsys:Buffer_1 ;
+.
+prodsys:CuringStation_3
+  rdf:type prod:CuringStation ;
+  rdfs:label "CuringStation_3" ;
+  prod:hasBuffer prodsys:Buffer_2 ;
+.
+prodsys:CuringStation_4
+  rdf:type prod:CuringStation ;
+  rdfs:label "CuringStation_4" ;
+  prod:hasBuffer prodsys:Buffer_2 ;
+.
+prodsys:Element_1
+  rdf:type prod:PrecastElement ;
+  rdfs:label "Element_1" ;
+  prod:componentType "Wall_Type04" ;
+  prod:consistsOf prodsys:ConcretingProcess_1 ;
+  prod:consistsOf prodsys:CuringProcess_1 ;
+  prod:consistsOf prodsys:FormworkProcess_1 ;
+  prod:consistsOf prodsys:ReinforcementProcess_1 ;
+  prod:consistsOf prodsys:StrippingProcess_1 ;
+  prod:isItemOf prodsys:Order_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:quantity "1"^^xsd:positiveInteger ;
+.
+prodsys:Element_10
+  rdf:type prod:PrecastElement ;
+  rdfs:label "Element_10" ;
+  prod:componentType "Column_Type02" ;
+  prod:consistsOf prodsys:ConcretingProcess_10 ;
+  prod:consistsOf prodsys:CuringProcess_10 ;
+  prod:consistsOf prodsys:FormworkProcess_10 ;
+  prod:consistsOf prodsys:ReinforcementProcess_10 ;
+  prod:consistsOf prodsys:StrippingProcess_10 ;
+  prod:isItemOf prodsys:Order_3 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:quantity "1"^^xsd:positiveInteger ;
+.
+prodsys:Element_2
+  rdf:type prod:PrecastElement ;
+  rdfs:label "Element_2" ;
+  prod:componentType "Wall_Type04" ;
+  prod:consistsOf prodsys:ConcretingProcess_2 ;
+  prod:consistsOf prodsys:CuringProcess_2 ;
+  prod:consistsOf prodsys:FormworkProcess_2 ;
+  prod:consistsOf prodsys:ReinforcementProcess_2 ;
+  prod:consistsOf prodsys:StrippingProcess_2 ;
+  prod:isItemOf prodsys:Order_1 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:quantity "1"^^xsd:positiveInteger ;
+.
+prodsys:Element_3
+  rdf:type prod:PrecastElement ;
+  rdfs:label "Element_3" ;
+  prod:componentType "Wall_Type04" ;
+  prod:consistsOf prodsys:ConcretingProcess_3 ;
+  prod:consistsOf prodsys:CuringProcess_3 ;
+  prod:consistsOf prodsys:FormworkProcess_3 ;
+  prod:consistsOf prodsys:ReinforcementProcess_3 ;
+  prod:consistsOf prodsys:StrippingProcess_3 ;
+  prod:isItemOf prodsys:Order_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:quantity "1"^^xsd:positiveInteger ;
+.
+prodsys:Element_4
+  rdf:type prod:PrecastElement ;
+  rdfs:label "Element_4" ;
+  prod:componentType "Wall_Type04" ;
+  prod:consistsOf prodsys:ConcretingProcess_4 ;
+  prod:consistsOf prodsys:CuringProcess_4 ;
+  prod:consistsOf prodsys:FormworkProcess_4 ;
+  prod:consistsOf prodsys:ReinforcementProcess_4 ;
+  prod:consistsOf prodsys:StrippingProcess_4 ;
+  prod:isItemOf prodsys:Order_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:quantity "1"^^xsd:positiveInteger ;
+.
+prodsys:Element_5
+  rdf:type prod:PrecastElement ;
+  rdfs:label "Element_5" ;
+  prod:componentType "Wall_Type04" ;
+  prod:consistsOf prodsys:ConcretingProcess_5 ;
+  prod:consistsOf prodsys:CuringProcess_5 ;
+  prod:consistsOf prodsys:FormworkProcess_5 ;
+  prod:consistsOf prodsys:ReinforcementProcess_5 ;
+  prod:consistsOf prodsys:StrippingProcess_5 ;
+  prod:isItemOf prodsys:Order_1 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:quantity "1"^^xsd:positiveInteger ;
+.
+prodsys:Element_6
+  rdf:type prod:PrecastElement ;
+  rdfs:label "Element_6" ;
+  prod:componentType "Column_Type01" ;
+  prod:consistsOf prodsys:ConcretingProcess_6 ;
+  prod:consistsOf prodsys:CuringProcess_6 ;
+  prod:consistsOf prodsys:FormworkProcess_6 ;
+  prod:consistsOf prodsys:ReinforcementProcess_6 ;
+  prod:consistsOf prodsys:StrippingProcess_6 ;
+  prod:isItemOf prodsys:Order_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:quantity "1"^^xsd:positiveInteger ;
+.
+prodsys:Element_7
+  rdf:type prod:PrecastElement ;
+  rdfs:label "Element_7" ;
+  prod:componentType "Column_Type01" ;
+  prod:consistsOf prodsys:ConcretingProcess_7 ;
+  prod:consistsOf prodsys:CuringProcess_7 ;
+  prod:consistsOf prodsys:FormworkProcess_7 ;
+  prod:consistsOf prodsys:ReinforcementProcess_7 ;
+  prod:consistsOf prodsys:StrippingProcess_7 ;
+  prod:isItemOf prodsys:Order_2 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:quantity "1"^^xsd:positiveInteger ;
+.
+prodsys:Element_8
+  rdf:type prod:PrecastElement ;
+  rdfs:label "Element_8" ;
+  prod:componentType "Column_Type02" ;
+  prod:consistsOf prodsys:ConcretingProcess_8 ;
+  prod:consistsOf prodsys:CuringProcess_8 ;
+  prod:consistsOf prodsys:FormworkProcess_8 ;
+  prod:consistsOf prodsys:ReinforcementProcess_8 ;
+  prod:consistsOf prodsys:StrippingProcess_8 ;
+  prod:isItemOf prodsys:Order_3 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:quantity "1"^^xsd:positiveInteger ;
+.
+prodsys:Element_9
+  rdf:type prod:PrecastElement ;
+  rdfs:label "Element_9" ;
+  prod:componentType "Column_Type02" ;
+  prod:consistsOf prodsys:ConcretingProcess_9 ;
+  prod:consistsOf prodsys:CuringProcess_9 ;
+  prod:consistsOf prodsys:FormworkProcess_9 ;
+  prod:consistsOf prodsys:ReinforcementProcess_9 ;
+  prod:consistsOf prodsys:StrippingProcess_9 ;
+  prod:isItemOf prodsys:Order_3 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:quantity "1"^^xsd:positiveInteger ;
+.
+prodsys:FormworkProcess_1
+  rdf:type prod:FormworkProcess ;
+  rdfs:label "FormworkProcess_1" ;
+  prod:canBeExecutedBy prodsys:FormworkStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:FormworkStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_1 ;
+  prod:sequencePosition "1"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:FormworkProcess_10
+  rdf:type prod:FormworkProcess ;
+  rdfs:label "FormworkProcess_10" ;
+  prod:canBeExecutedBy prodsys:FormworkStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:FormworkStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_10 ;
+  prod:sequencePosition "1"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:FormworkProcess_2
+  rdf:type prod:FormworkProcess ;
+  rdfs:label "FormworkProcess_1" ;
+  prod:canBeExecutedBy prodsys:FormworkStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "2"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:FormworkStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_2 ;
+  prod:sequencePosition "1"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:FormworkProcess_3
+  rdf:type prod:FormworkProcess ;
+  rdfs:label "FormworkProcess_3" ;
+  prod:canBeExecutedBy prodsys:FormworkStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:FormworkStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_3 ;
+  prod:sequencePosition "1"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:FormworkProcess_4
+  rdf:type prod:FormworkProcess ;
+  rdfs:label "FormworkProcess_4" ;
+  prod:canBeExecutedBy prodsys:FormworkStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:FormworkStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_4 ;
+  prod:sequencePosition "1"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:FormworkProcess_5
+  rdf:type prod:FormworkProcess ;
+  rdfs:label "FormworkProcess_5" ;
+  prod:canBeExecutedBy prodsys:FormworkStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:FormworkStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_5 ;
+  prod:sequencePosition "1"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:FormworkProcess_6
+  rdf:type prod:FormworkProcess ;
+  rdfs:label "FormworkProcess_6" ;
+  prod:canBeExecutedBy prodsys:FormworkStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.7"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:FormworkStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_6 ;
+  prod:sequencePosition "1"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:FormworkProcess_7
+  rdf:type prod:FormworkProcess ;
+  rdfs:label "FormworkProcess_7" ;
+  prod:canBeExecutedBy prodsys:FormworkStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "2.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:FormworkStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_7 ;
+  prod:sequencePosition "1"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:FormworkProcess_8
+  rdf:type prod:FormworkProcess ;
+  rdfs:label "FormworkProcess_8" ;
+  prod:canBeExecutedBy prodsys:FormworkStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:FormworkStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_8 ;
+  prod:sequencePosition "1"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:FormworkProcess_9
+  rdf:type prod:FormworkProcess ;
+  rdfs:label "FormworkProcess_9" ;
+  prod:canBeExecutedBy prodsys:FormworkStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "3.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:FormworkStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_9 ;
+  prod:sequencePosition "1"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:FormworkStation_1
+  rdf:type prod:FormworkStation ;
+  rdfs:label "FormworkStation_1" ;
+.
+prodsys:FormworkStation_2
+  rdf:type prod:FormworkStation ;
+  rdfs:label "FormworkStation_2" ;
+.
+prodsys:Order_1
+  rdf:type prod:Order ;
+  rdfs:label "Order_1" ;
+  prod:dueDate "2023-04-06T12:00:00.000"^^xsd:dateTime ;
+  prod:expectedDeliveryDate "1990-01-01T10:00:00.000"^^xsd:dateTime ;
+  prod:hasItem prodsys:Element_1 ;
+  prod:hasItem prodsys:Element_2 ;
+  prod:hasItem prodsys:Element_3 ;
+  prod:hasItem prodsys:Element_4 ;
+  prod:hasItem prodsys:Element_5 ;
+  prod:orderID "MOD1-2023-04" ;
+  prod:produces prodsys:Element_1 ;
+.
+prodsys:Order_2
+  rdf:type prod:Order ;
+  rdfs:label "Order_2" ;
+  prod:dueDate "2023-04-05T17:00:00.000"^^xsd:dateTime ;
+  prod:expectedDeliveryDate "1990-01-01T10:00:00.000"^^xsd:dateTime ;
+  prod:hasItem prodsys:Element_6 ;
+  prod:hasItem prodsys:Element_7 ;
+  prod:orderID "MOD2-2023-04" ;
+.
+prodsys:Order_3
+  rdf:type prod:Order ;
+  rdfs:label "Order_3" ;
+  prod:dueDate "2023-04-06T08:00:00.000"^^xsd:dateTime ;
+  prod:expectedDeliveryDate "1990-01-01T10:00:00.000"^^xsd:dateTime ;
+  prod:hasItem prodsys:Element_10 ;
+  prod:hasItem prodsys:Element_8 ;
+  prod:hasItem prodsys:Element_9 ;
+  prod:orderID "MOD3-2023-04" ;
+.
+prodsys:ProdUnit1
+  rdf:type prod:ProductionUnit ;
+  rdfs:label "ProdUnit1" ;
+  prod:consistsOf prodsys:ConcretingStation_1 ;
+  prod:consistsOf prodsys:CuringStation_1 ;
+  prod:consistsOf prodsys:CuringStation_2 ;
+  prod:consistsOf prodsys:FormworkStation_1 ;
+  prod:consistsOf prodsys:ReinforcementStation_1 ;
+  prod:consistsOf prodsys:StrippingStation_1 ;
+  prod:produces prodsys:Element_1 ;
+  prod:produces prodsys:Element_3 ;
+  prod:produces prodsys:Element_4 ;
+  prod:produces prodsys:Element_7 ;
+  prod:produces prodsys:Element_8 ;
+  prod:produces prodsys:Element_9 ;
+.
+prodsys:ProdUnit2
+  rdf:type prod:ProductionUnit ;
+  rdfs:label "ProdUnit2" ;
+  prod:consistsOf prodsys:ConcretingStation_2 ;
+  prod:consistsOf prodsys:CuringStation_3 ;
+  prod:consistsOf prodsys:CuringStation_4 ;
+  prod:consistsOf prodsys:FormworkStation_2 ;
+  prod:consistsOf prodsys:ReinforcementStation_2 ;
+  prod:consistsOf prodsys:StrippingStation_2 ;
+  prod:produces prodsys:Element_10 ;
+  prod:produces prodsys:Element_2 ;
+  prod:produces prodsys:Element_5 ;
+  prod:produces prodsys:Element_6 ;
+.
+prodsys:Production
+  rdf:type prod:ProductionSubmodel ;
+  rdfs:label "Production Submodel" ;
+.
+prodsys:ProductionSystem_1
+  rdf:type prod:ProductionSystem ;
+  rdfs:label "ProductionSystem_1" ;
+  prod:consistsOf prodsys:ProdUnit1 ;
+  prod:consistsOf prodsys:ProdUnit2 ;
+  prod:produces prodsys:Order_1 ;
+  prod:produces prodsys:Order_2 ;
+  prod:produces prodsys:Order_3 ;
+.
+prodsys:ReinforcementProcess_1
+  rdf:type prod:ReinforcementProcess ;
+  rdfs:label "ReinforcementProcess_1" ;
+  prod:canBeExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_1 ;
+  prod:sequencePosition "2"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ReinforcementProcess_10
+  rdf:type prod:ReinforcementProcess ;
+  rdfs:label "ReinforcementProcess_10" ;
+  prod:canBeExecutedBy prodsys:ReinforcementStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ReinforcementStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_10 ;
+  prod:sequencePosition "2"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ReinforcementProcess_2
+  rdf:type prod:ReinforcementProcess ;
+  rdfs:label "ReinforcementProcess_2" ;
+  prod:canBeExecutedBy prodsys:ReinforcementStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "2"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ReinforcementStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_2 ;
+  prod:sequencePosition "2"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ReinforcementProcess_3
+  rdf:type prod:ReinforcementProcess ;
+  rdfs:label "ReinforcementProcess_3" ;
+  prod:canBeExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_3 ;
+  prod:sequencePosition "2"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ReinforcementProcess_4
+  rdf:type prod:ReinforcementProcess ;
+  rdfs:label "ReinforcementProcess_4" ;
+  prod:canBeExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "2.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_4 ;
+  prod:sequencePosition "2"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ReinforcementProcess_5
+  rdf:type prod:ReinforcementProcess ;
+  rdfs:label "ReinforcementProcess_5" ;
+  prod:canBeExecutedBy prodsys:ReinforcementStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ReinforcementStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_5 ;
+  prod:sequencePosition "2"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ReinforcementProcess_6
+  rdf:type prod:ReinforcementProcess ;
+  rdfs:label "ReinforcementProcess_6" ;
+  prod:canBeExecutedBy prodsys:ReinforcementStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "2.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ReinforcementStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_6 ;
+  prod:sequencePosition "2"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ReinforcementProcess_7
+  rdf:type prod:ReinforcementProcess ;
+  rdfs:label "ReinforcementProcess_7" ;
+  prod:canBeExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "2.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_7 ;
+  prod:sequencePosition "2"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ReinforcementProcess_8
+  rdf:type prod:ReinforcementProcess ;
+  rdfs:label "ReinforcementProcess_8" ;
+  prod:canBeExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_8 ;
+  prod:sequencePosition "2"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ReinforcementProcess_9
+  rdf:type prod:ReinforcementProcess ;
+  rdfs:label "ReinforcementProcess_9" ;
+  prod:canBeExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "3.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:ReinforcementStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_9 ;
+  prod:sequencePosition "2"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:ReinforcementStation_1
+  rdf:type prod:ReinforcementStation ;
+  rdfs:label "ReinforcementStation_1" ;
+.
+prodsys:ReinforcementStation_2
+  rdf:type prod:ReinforcementStation ;
+  rdfs:label "ReinforcementStation_2" ;
+.
+prodsys:StrippingProcess_1
+  rdf:type prod:StrippingProcess ;
+  rdfs:label "StrippingProcess_1" ;
+  prod:canBeExecutedBy prodsys:StrippingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:StrippingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_1 ;
+  prod:sequencePosition "5"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:StrippingProcess_10
+  rdf:type prod:StrippingProcess ;
+  rdfs:label "StrippingProcess_10" ;
+  prod:canBeExecutedBy prodsys:StrippingStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:StrippingStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_10 ;
+  prod:sequencePosition "5"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:StrippingProcess_2
+  rdf:type prod:StrippingProcess ;
+  rdfs:label "StrippingProcess_2" ;
+  prod:canBeExecutedBy prodsys:StrippingStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:StrippingStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_2 ;
+  prod:sequencePosition "5"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:StrippingProcess_3
+  rdf:type prod:StrippingProcess ;
+  rdfs:label "StrippingProcess_3" ;
+  prod:canBeExecutedBy prodsys:StrippingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:StrippingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_3 ;
+  prod:sequencePosition "5"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:StrippingProcess_4
+  rdf:type prod:StrippingProcess ;
+  rdfs:label "StrippingProcess_4" ;
+  prod:canBeExecutedBy prodsys:StrippingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:StrippingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_4 ;
+  prod:sequencePosition "5"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:StrippingProcess_5
+  rdf:type prod:StrippingProcess ;
+  rdfs:label "StrippingProcess_5" ;
+  prod:canBeExecutedBy prodsys:StrippingStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:StrippingStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_5 ;
+  prod:sequencePosition "5"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:StrippingProcess_6
+  rdf:type prod:StrippingProcess ;
+  rdfs:label "StrippingProcess_6" ;
+  prod:canBeExecutedBy prodsys:StrippingStation_2 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.6"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:StrippingStation_2 ;
+  prod:isProducedBy prodsys:ProdUnit2 ;
+  prod:produces prodsys:Element_6 ;
+  prod:sequencePosition "5"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:StrippingProcess_7
+  rdf:type prod:StrippingProcess ;
+  rdfs:label "StrippingProcess_7" ;
+  prod:canBeExecutedBy prodsys:StrippingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.5"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:StrippingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_7 ;
+  prod:sequencePosition "5"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:StrippingProcess_8
+  rdf:type prod:StrippingProcess ;
+  rdfs:label "StrippingProcess_8" ;
+  prod:canBeExecutedBy prodsys:StrippingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "0.4"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:StrippingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_8 ;
+  prod:sequencePosition "5"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:StrippingProcess_9
+  rdf:type prod:StrippingProcess ;
+  rdfs:label "StrippingProcess_9" ;
+  prod:canBeExecutedBy prodsys:StrippingStation_1 ;
+  prod:endTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:expectedDuration "1.0"^^xsd:double ;
+  prod:expectedStartTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+  prod:isExecutedBy prodsys:StrippingStation_1 ;
+  prod:isProducedBy prodsys:ProdUnit1 ;
+  prod:produces prodsys:Element_9 ;
+  prod:sequencePosition "5"^^xsd:positiveInteger ;
+  prod:startTime "1990-01-01T10:00:00.00"^^xsd:dateTime ;
+.
+prodsys:StrippingStation_1
+  rdf:type prod:StrippingStation ;
+  rdfs:label "StrippingStation_1" ;
+.
+prodsys:StrippingStation_2
+  rdf:type prod:StrippingStation ;
+  rdfs:label "StrippingStation_2" ;
+.

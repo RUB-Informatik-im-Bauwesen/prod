@@ -1,0 +1,465 @@
+# baseURI: https://rub-informatik-im-bauwesen.github.io/prod
+# imports: https://admin-shell.io/aas/3/0/
+# prefix: prod
+
+@prefix aas: <https://admin-shell.io/aas/3/0/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prod: <https://rub-informatik-im-bauwesen.github.io/prod#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rub-informatik-im-bauwesen.github.io/prod>
+  rdf:type owl:Ontology ;
+  dc:created "2024-02-01"^^xsd:date ;
+  dc:creator [
+      rdf:type schema:Person ;
+      schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
+          schema:name "Ruhr University Bochum" ;
+        ] ;
+      schema:name "Philipp Hagedorn" ;
+    ] ;
+  dc:creator [
+      rdf:type schema:Person ;
+      schema:email <mailto:simon.kosse@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0002-6391-784X> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/simon_kosse.html.en> ;
+          schema:name "Ruhr University Bochum" ;
+        ] ;
+      schema:name "Simon Kosse" ;
+    ] ;
+  dc:description "The Production Submodel (PROD) for the Asset Administration Shell (AAS) is defined for providing information about the submodel for industrialized precast concrete production. The submodel is aligned with the relevant terminology of the AAS data model according to the specification version v3.0 at https://admin-shell.io/aas/3/0/"@en ;
+  dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dc:rights "Copyright 2024 by Chair of Computing in Engineering, Ruhr University Bochum" ;
+  dc:source "https://github.com/RUB-Informatik-im-Bauwesen/prod"^^xsd:anyURI ;
+  dc:title "AAS Production Submodel (PROD)"@en ;
+  vann:preferredNamespacePrefix "prod" ;
+  owl:imports aas: ;
+  owl:versionInfo "1.0" ;
+.
+prod:Buffer
+  rdf:type owl:Class ;
+  rdfs:label "Buffer" ;
+  rdfs:subClassOf prod:ProductionStation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty prod:bufferSize ;
+    ] ;
+.
+prod:ConcretingProcess
+  rdf:type owl:Class ;
+  rdfs:label "ConcretingProcess" ;
+  rdfs:subClassOf prod:ProductionProcess ;
+.
+prod:ConcretingStation
+  rdf:type owl:Class ;
+  rdfs:label "ConcretingStation" ;
+  rdfs:subClassOf prod:ProductionStation ;
+.
+prod:CuringProcess
+  rdf:type owl:Class ;
+  rdfs:label "CuringProcess" ;
+  rdfs:subClassOf prod:ProductionProcess ;
+.
+prod:CuringStation
+  rdf:type owl:Class ;
+  rdfs:label "CuringStation" ;
+  rdfs:subClassOf prod:ProductionStation ;
+.
+prod:FormworkProcess
+  rdf:type owl:Class ;
+  rdfs:label "FormworkProcess" ;
+  rdfs:subClassOf prod:ProductionProcess ;
+.
+prod:FormworkStation
+  rdf:type owl:Class ;
+  rdfs:label "FormworkStation" ;
+  rdfs:subClassOf prod:ProductionStation ;
+.
+prod:Order
+  rdf:type owl:Class ;
+  rdfs:label "Order"@en ;
+  rdfs:subClassOf aas:SubmodelElementCollection ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty prod:dueDate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty prod:expectedDeliveryDate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty prod:orderID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:hasItem ;
+      owl:someValuesFrom prod:PrecastElement ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:isPartOf ;
+      owl:someValuesFrom prod:ProductionSystem ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:isProducedBy ;
+      owl:someValuesFrom prod:ProductionUnit ;
+    ] ;
+.
+prod:PrecastElement
+  rdf:type owl:Class ;
+  rdfs:label "PrecastElement"@en ;
+  rdfs:subClassOf aas:SubmodelElementCollection ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty prod:quantity ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass aas:AssetAdministrationShell ;
+      owl:onProperty prod:precastElementAAS ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass prod:ProductionUnit ;
+      owl:onProperty prod:isProducedBy ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty prod:componentType ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:isItemOf ;
+      owl:someValuesFrom prod:Order ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:isProducedBy ;
+      owl:someValuesFrom prod:ProductionProcess ;
+    ] ;
+.
+prod:ProductionProcess
+  rdf:type owl:Class ;
+  rdfs:label "ProductionProcess"@en ;
+  rdfs:subClassOf aas:SubmodelElementCollection ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty prod:endTime ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty prod:expectedDuration ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty prod:expectedStartTime ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty prod:sequencePosition ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty prod:startTime ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass prod:ProductionStation ;
+      owl:onProperty prod:canBeExecutedBy ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass prod:ProductionStation ;
+      owl:onProperty prod:isExecutedBy ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:produces ;
+      owl:someValuesFrom prod:PrecastElement ;
+    ] ;
+.
+prod:ProductionStation
+  rdf:type owl:Class ;
+  rdfs:label "ProductionStation"@en ;
+  rdfs:subClassOf aas:SubmodelElementCollection ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass aas:AssetAdministrationShell ;
+      owl:onProperty prod:prodStationAAS ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:hasBuffer ;
+      owl:someValuesFrom prod:Buffer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:isPartOf ;
+      owl:someValuesFrom prod:ProductionUnit ;
+    ] ;
+.
+prod:ProductionSubmodel
+  rdf:type owl:Class ;
+  rdfs:label "ProductionSubmodel" ;
+  rdfs:subClassOf aas:Submodel ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:consistsOf ;
+      owl:someValuesFrom prod:ProductionSystem ;
+    ] ;
+.
+prod:ProductionSystem
+  rdf:type owl:Class ;
+  rdfs:label "ProductionSystem"@en ;
+  rdfs:subClassOf aas:SubmodelElementCollection ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:consistsOf ;
+      owl:someValuesFrom prod:ProductionUnit ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:produces ;
+      owl:someValuesFrom prod:Order ;
+    ] ;
+.
+prod:ProductionUnit
+  rdf:type owl:Class ;
+  rdfs:label "ProductionUnit"@en ;
+  rdfs:subClassOf aas:SubmodelElementCollection ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:consistsOf ;
+      owl:someValuesFrom prod:ProductionStation ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty prod:isPartOf ;
+      owl:someValuesFrom prod:ProductionSystem ;
+    ] ;
+.
+prod:ReinforcementProcess
+  rdf:type owl:Class ;
+  rdfs:label "ReinforcementProcess" ;
+  rdfs:subClassOf prod:ProductionProcess ;
+.
+prod:ReinforcementStation
+  rdf:type owl:Class ;
+  rdfs:label "ReinforcementStation" ;
+  rdfs:subClassOf prod:ProductionStation ;
+.
+prod:StrippingProcess
+  rdf:type owl:Class ;
+  rdfs:label "StrippingProcess" ;
+  rdfs:subClassOf prod:ProductionProcess ;
+.
+prod:StrippingStation
+  rdf:type owl:Class ;
+  rdfs:label "StrippingStation" ;
+  rdfs:subClassOf prod:ProductionStation ;
+.
+prod:bufferSize
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Number of components that can be temporarily stored before being processed or transferred."@en ;
+  rdfs:domain prod:ProductionProcess ;
+  rdfs:label "bufferSize"@en ;
+  rdfs:range xsd:integer ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+prod:canBeExecutedBy
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain prod:ProductionProcess ;
+  rdfs:label "canBeExecutedBy" ;
+  rdfs:range prod:ProductionStation ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+prod:componentType
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Specific category or type of a precast concrete component or element."@en ;
+  rdfs:domain prod:PrecastElement ;
+  rdfs:label "componentType"@en ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+prod:consistsOf
+  rdf:type owl:ObjectProperty ;
+  rdf:type owl:TransitiveProperty ;
+  rdfs:label "consistsOf"@en ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+  owl:inverseOf prod:isPartOf ;
+.
+prod:dueDate
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Deadline or the date by which a production job is expected to be completed."@en ;
+  rdfs:domain prod:Order ;
+  rdfs:label "dueDate"@en ;
+  rdfs:range xsd:dateTime ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+prod:endTime
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Time at which a particular task, event, or activity is completed or finished."@en ;
+  rdfs:domain prod:ProductionProcess ;
+  rdfs:label "endTime"@en ;
+  rdfs:range xsd:dateTime ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+prod:expectedDeliveryDate
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Date on which precast modules are to be delivered to the construction site for installation as part of a building or infrastructure project."@en ;
+  rdfs:domain prod:Order ;
+  rdfs:label "expectedDeliveryDate"@en ;
+  rdfs:range xsd:dateTime ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+prod:expectedDuration
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Estimated or anticipated length of time it will take to complete a task, project, or activity."@en ;
+  rdfs:domain prod:ProductionProcess ;
+  rdfs:label "expectedDuration"@en ;
+  rdfs:range xsd:double ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+prod:expectedStartTime
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Designated or scheduled time at which a particular task, event, or activity is expected to begin."@en ;
+  rdfs:domain prod:ProductionProcess ;
+  rdfs:label "expectedStartTime"@en ;
+  rdfs:range xsd:dateTime ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+prod:hasBuffer
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain prod:ProductionStation ;
+  rdfs:label "hasBuffer" ;
+  rdfs:range prod:Buffer ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+prod:hasItem
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain prod:Order ;
+  rdfs:label "hasItem" ;
+  rdfs:range prod:PrecastElement ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+  owl:inverseOf prod:isItemOf ;
+.
+prod:isExecutedBy
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain prod:ProductionProcess ;
+  rdfs:label "isExecutedBy" ;
+  rdfs:range prod:ProductionStation ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+prod:isItemOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain prod:PrecastElement ;
+  rdfs:label "isItemOf" ;
+  rdfs:range prod:Order ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+  owl:inverseOf prod:hasItem ;
+.
+prod:isPartOf
+  rdf:type owl:ObjectProperty ;
+  rdf:type owl:TransitiveProperty ;
+  rdfs:label "isPartOf"@en ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+  owl:inverseOf prod:consistsOf ;
+.
+prod:isProducedBy
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain prod:Order ;
+  rdfs:domain prod:PrecastElement ;
+  rdfs:label "isProducedBy"@en ;
+  rdfs:range prod:ProductionProcess ;
+  rdfs:range prod:ProductionSystem ;
+  rdfs:range prod:ProductionUnit ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+  owl:inverseOf prod:produces ;
+.
+prod:orderID
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Unique identifier assigned to a specific job or task in a production system, allowing it to be tracked and managed."@en ;
+  rdfs:domain prod:Order ;
+  rdfs:label "orderID"@en ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+prod:precastElementAAS
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Reference to external AAS of a precast concrete element."@en ;
+  rdfs:domain prod:PrecastElement ;
+  rdfs:label "precastElementAAS"@en ;
+  rdfs:range aas:AssetAdministrationShell ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+prod:prodStationAAS
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Reference to external AAS of a production station."@en ;
+  rdfs:domain prod:ProductionStation ;
+  rdfs:label "prodStationAAS"@en ;
+  rdfs:range aas:AssetAdministrationShell ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+prod:produces
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain prod:ProductionProcess ;
+  rdfs:domain prod:ProductionSystem ;
+  rdfs:domain prod:ProductionUnit ;
+  rdfs:label "produces"@en ;
+  rdfs:range prod:Order ;
+  rdfs:range prod:PrecastElement ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+  owl:inverseOf prod:isProducedBy ;
+.
+prod:quantity
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Number or quantity of a specific component needed or required for a particular project or product."@en ;
+  rdfs:domain prod:PrecastElement ;
+  rdfs:label "quantity"@en ;
+  rdfs:range xsd:positiveInteger ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+prod:sequencePosition
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Specific location or order of a task or activity within a larger sequence or series of tasks."@en ;
+  rdfs:domain prod:ProductionProcess ;
+  rdfs:label "sequencePosition"@en ;
+  rdfs:range xsd:positiveInteger ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+prod:startTime
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Designated or scheduled time at which a particular task, event, or activity begins."@en ;
+  rdfs:domain prod:ProductionProcess ;
+  rdfs:label "startTime"@en ;
+  rdfs:range xsd:dateTime ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
